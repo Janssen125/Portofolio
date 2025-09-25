@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome!!!</title>
+    <title>Janssen Addison | Portofolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
-        <nav>
+        <nav id="navbar" class="hidden">
             <ul>
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -19,20 +21,170 @@
     <main>
         <section id="welcome">
             <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <h2>Hello, I'm Janssen Addison</h2>
-                        <p>Welcome to my personal portfolio website. Here you can find information about me, my projects, and how to contact me.</p>
+                <div class="row coolanimation">
+                    <div class="col col-l flex-sm-col justify-center">
+                        <div class="bounce">
+                            <h1>Hello, I'm <br><span class="accent-text">Janssen Addison</span></h1>
+                        </div>
+                        <p>A Computer Science student & developer passionate about building website and doing problem
+                            solving.</p>
                     </div>
-                    <div class="col">
-                        <img src="assets/1.jpeg" alt="Profile Picture" class="profile-pic">
+                    <div class="col col-r">
+                        <img src="assets/1.jpeg" alt="Profile Picture" class="profile-pic spin">
                     </div>
                 </div>
             </div>
         </section>
+        <section id="about" class="justify-center align-center flex">
+            <div class="container">
+                <div class="row justify-center align-center">
+                    <div class="col">
+                        <img src="assets/2.jpg" alt="Coding Competition" class="about-pic">
+                    </div>
+                    <div class="col col-l flex-sm-col">
+                        <h2>About Me</h2>
+                        <p>I’m a 20-year-old Computer Science student at Binus University and a former member of BNCC’s
+                            elite team.</p>
+                        <p>I’m passionate about web development, with experience in <span class="accent-text">Laravel,
+                                PHP, HTML, CSS, and
+                                JavaScript</span>. I enjoy building websites that are both functional and user-friendly,
+                            especially
+                            projects that combine a clear landing page with a powerful dashboard. My past work includes
+                            <span class="accent-text">Fund4Future</span>, a crowdfunding platform for students and
+                            communities, and a
+                            <span class="accent-text">school teacher biodata website</span> designed to organize teacher
+                            information
+                            efficiently. What excites me most about web development is turning ideas into platforms that
+                            people can actually use.</p>
+                        <p>I love solving problems through code and constantly seek out new challenges that push me to
+                            grow as a developer.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="projects">
+            <div class="container align-center">
+                <h2>Projects</h2>
+                <div class="row">
+                    <div class="col" id="proj-desc1">
+                        <h3>Fund4Future</h3>
+                        <p>
+                            Fund4Future is a crowdfunding platform built to help students and communities raise
+                            financial
+                            support for their projects and initiatives. The website includes a landing page for public
+                            campaigns and a dashboard for managing fundings. To ensure security and transparency, each
+                            funding page features a comment section, while a built-in chat system allows communication
+                            between users and staff/admins to verify campaigns and prevent fraud. The platform also
+                            integrates with Midtrans to handle balance top-ups and transactions.
+                        </p>
+                        <p>
+                            This project was developed collaboratively using an <span class="accent-text">Agile
+                                approach</span>. I contributed as a
+                            <span class="accent-text">Scrum Master</span>, <span class="accent-text">Product
+                                Owner</span>, and <span class="accent-text">Fullstack
+                                Developer</span>, working alongside my teammate to design, build, and refine the
+                            platform.
+                        </p>
+
+                        <p class="tech-stack">
+                            <strong>Tech stack:</strong> HTML, CSS, JavaScript, Laravel, Bootstrap, MySql
+                        </p>
+                        <a href="https://github.com/Janssen125/Fund4Future" target="_blank" class="btn">
+                            GitHub
+                        </a>
+                    </div>
+                    <div class="col">
+                        <div class="carousel carousel1">
+                            <div class="slides">
+                                <img src="./assets/landing.png" alt="Fund4Future Landing Page">
+                                <img src="./assets/dashboard.png" alt="Fund4Future Dashboard">
+                                <img src="./assets/midtrans.png" alt="Fund4Future Transaction">
+                                <img src="./assets/detail.png" alt="Fund4Future Detail">
+                                <img src="./assets/fund_list.png" alt="Fund4Future Funding List">
+                                <img src="./assets/chat.png" alt="Fund4Future Chat">
+                                <img src="./assets/about.png" alt="Fund4Future About Us">
+                                <img src="./assets/contact.png" alt="Fund4Future Contact Us">
+                                <img src="./assets/fund_history.png" alt="Fund4Future Fund History">
+                                <img src="./assets/profile.png" alt="Fund4Future Profile Page">
+                                <img src="./assets/ticket_sys.png" alt="Fund4Future Ticketing System">
+                            </div>
+                            <button class="prev">&#10094;</button>
+                            <button class="next">&#10095;</button>
+                        </div>
+                    </div>
+                </div>
+                <hr class="project-border">
+                <div class="row">
+                    <div class="col" id="proj-desc2">
+                        <h3>Biodata Guru</h3>
+                        <p>
+                            Biodata Guru is a web application built to help schools manage and organize teacher
+                            information
+                            more efficiently. The platform allows users to input teacher data directly through a form or
+                            by
+                            uploading an Excel template that has been preset for consistency. To support better data
+                            management, managers can export the collected information into PDF format, either as a
+                            complete
+                            list or based on specific filters such as kindergarten, primary, or high school teachers.
+                            Additionally, the system provides access to supporting documents (berkas) by listing
+                            uploaded
+                            PDFs for easy reference. With these features, Biodata Guru simplifies administrative tasks,
+                            reduces manual errors, and ensures that teacher data can be stored, viewed, and exported in
+                            a
+                            structured and professional way.
+                        </p>
+                        <p class="tech-stack">
+                            <strong>Tech stack:</strong> HTML, CSS, JavaScript, PHP, MySql
+                        </p>
+                        <a href="https://github.com/Janssen125/biodata" target="_blank" class="btn">
+                            GitHub
+                        </a>
+                    </div>
+                    <div class="col">
+                        <div class="carousel carousel2">
+                            <div class="slides">
+                                <img src="./assets/login_b.png" alt="Biodata Login">
+                                <img src="./assets/dashboard_b.png" alt="Biodata Dashboard">
+                                <img src="./assets/user_list_b.png" alt="Biodata User List">
+                                <img src="./assets/bio_list_b.png" alt="Biodata BioList">
+                                <img src="./assets/berkas_b.png" alt="Biodata Berkas">
+                                <img src="./assets/create1_b.png" alt="Biodata Create Karyawan">
+                                <img src="./assets/create2_b.png" alt="Biodata Create Karyawan2">
+                            </div>
+                            <button class="prev">&#10094;</button>
+                            <button class="next">&#10095;</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="container text-center">
+                <h2 class="accent-text">Contact Me</h2>
+                <p>
+                    You can reach me directly through email or phone, and check my full professional data on 
+                    <a href="https://www.linkedin.com/in/janssenaddison/" target="_blank" class="accent-text">LinkedIn</a>.
+                  </p>
+                  <ul class="contact-list">
+                    <li>
+                        📧 <a href="mailto:janssen.addison@binus.ac.id">janssen.addison@binus.ac.id</a>
+                    </li>
+                    <li>
+                        💼 <a href="https://www.linkedin.com/in/janssenaddison/"
+                            target="_blank">https://www.linkedin.com/in/janssenaddison/</a>
+                    </li>
+                    <li>
+                        📱 <a href="tel:+6285101556689">+62 851-0155-6689</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
     </main>
     <footer>
-
+        <p>&copy; 2025 Janssen Addison. All rights reserved.</p>
     </footer>
 </body>
+<script src="script.js"></script>
+<script src="carousel.js"></script>
+
 </html>
