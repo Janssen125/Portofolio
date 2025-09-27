@@ -1,64 +1,73 @@
 const carousels1 = document.querySelectorAll(".carousel1");
 const carousels2 = document.querySelectorAll(".carousel2");
-const description = document.getElementById("proj-desc1");
-const description2 = document.getElementById("proj-desc2");
 
-if (description) {
-    const children = Array.from(description.children);
-    let maxHeight = 0;
-    Array.from(description.children).forEach(child => {
-        maxHeight += child.offsetHeight;
-        
-    });
+carousels1.forEach(carousel => {
+  const slides = carousel.querySelector(".slides");
+  const images = slides.querySelectorAll("img");
+  const prev = carousel.querySelector(".prev");
+  const next = carousel.querySelector(".next");
 
-  carousels1.forEach(carousel => {
-    const slides = carousel.querySelector(".slides");
-    const images = slides.querySelectorAll("img");
-    const prev = carousel.querySelector(".prev");
-    const next = carousel.querySelector(".next");
+  let index = 0;
 
-    images.forEach(img => {
-      img.style.height = `${maxHeight}px`;
-    });
-
-    let index = 0;
-
-    function showSlide(i) {
+  function showSlide(i) {
       index = (i + images.length) % images.length;
       slides.style.transform = `translateX(${-index * 100}%)`;
-    }
+  }
 
-    prev.addEventListener("click", () => showSlide(index - 1));
-    next.addEventListener("click", () => showSlide(index + 1));
+  prev.addEventListener("click", () => {
+      showSlide(index - 1);
+      resetAutoScroll();
   });
-}
+  next.addEventListener("click", () => {
+      showSlide(index + 1);
+      resetAutoScroll();
+  });
 
-if(description2) {
-    const children2 = Array.from(description2.children);
-    let maxHeight2 = 0;
-    Array.from(description2.children).forEach(child => {
-        maxHeight2 += child.offsetHeight;
-        
-    });
+  // Auto scroll
+  let autoScroll = setInterval(() => {
+      showSlide(index + 1);
+  }, 3000);
 
-  carousels2.forEach(carousel => {
-    const slides = carousel.querySelector(".slides");
-    const images = slides.querySelectorAll("img");
-    const prev = carousel.querySelector(".prev");
-    const next = carousel.querySelector(".next");
 
-    images.forEach(img => {
-      img.style.height = `${maxHeight2}px`;
-    });
+  function resetAutoScroll() {
+      clearInterval(autoScroll);
+      autoScroll = setInterval(() => {
+          showSlide(index + 1);
+      }, 3000);
+  }
+});
 
-    let index = 0;
+carousels2.forEach(carousel => {
+  const slides = carousel.querySelector(".slides");
+  const images = slides.querySelectorAll("img");
+  const prev = carousel.querySelector(".prev");
+  const next = carousel.querySelector(".next");
 
-    function showSlide(i) {
+  let index = 0;
+
+  function showSlide(i) {
       index = (i + images.length) % images.length;
       slides.style.transform = `translateX(${-index * 100}%)`;
-    }
+  }
 
-    prev.addEventListener("click", () => showSlide(index - 1));
-    next.addEventListener("click", () => showSlide(index + 1));
+  prev.addEventListener("click", () => {
+      showSlide(index - 1);
+      resetAutoScroll();
   });
-}
+  next.addEventListener("click", () => {
+      showSlide(index + 1);
+      resetAutoScroll();
+  });
+
+  // Auto scroll
+  let autoScroll = setInterval(() => {
+      showSlide(index + 1);
+  }, 3000);
+
+  function resetAutoScroll() {
+      clearInterval(autoScroll);
+      autoScroll = setInterval(() => {
+          showSlide(index + 1);
+      }, 3000);
+  }
+});
